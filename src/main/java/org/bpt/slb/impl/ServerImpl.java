@@ -5,12 +5,14 @@ import org.bpt.slb.api.Server;
 public class ServerImpl implements Server {
 	private String name;
 	private String address;
-	private String port;
+	private int port;
+	private String id;
 	
-	public ServerImpl(String name, String address, String port) {
+	public ServerImpl(String id, String name, String address, int port) {
 		this.name = name;
 		this.address = address;
 		this.port = port;
+		this.id = id;
 	}
 
 	@Override
@@ -24,7 +26,12 @@ public class ServerImpl implements Server {
 	}
 	
 	@Override
-	public String getPort() {
+	public int getPort() {
 		return port;
+	}
+
+	@Override
+	public String getId() {
+		return id;
 	}
 }

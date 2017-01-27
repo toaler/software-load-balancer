@@ -21,4 +21,4 @@ backend nodes
     option forwardfor
     http-request set-header X-Forwarded-Port %[dst_port]
     option httpchk HEAD / HTTP/1.1\r\nHost:localhost
-    <servers:{ server | server <server.name> <server.address>:<server.port> check<\n>}>
+    <servers:{ server | server <server.name>-<server.id> <server.address>:<server.port> check<\n>}>
